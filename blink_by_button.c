@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-const uint led_pin_red = 13; // Pino do LED vermelho
+const uint led_pin_red = 13;
 const uint led_pin_green = 11;
 const uint led_pin_blue = 12; 
 
-const uint btn_pin_a = 5;      // Pino do botão B
+const uint btn_pin_a = 5;      
 const uint btn_pin_b = 6;
 
 void setup_gpio(uint pin, bool is_output);
@@ -24,13 +24,13 @@ int main()
             set_leds(1, 1, 1);
             break;
         case 0b01:
-            set_leds(1, 0, 0); // Red LED on
+            set_leds(1, 0, 0); 
             break;
         case 0b10:
-            set_leds(0, 1, 0); // Green LED on
+            set_leds(0, 1, 0); 
             break;
         case 0b00:
-            set_leds(0, 0, 1); // Blue LED on
+            set_leds(0, 0, 1); 
             break;
         }
       sleep_ms(100);
